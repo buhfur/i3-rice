@@ -7,6 +7,7 @@ exec --no-startup-id  nitrogen --restore
 exec --no-startup-id redshift -l 35:34 -t 4000:4000
 exec --no-startup-id mongod --dbpath ~/database 
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
+exec --no-startup-id xmodmap ~/.Xmodmap
 exec_always --no-startup-id xborders --border-rgba "#ffc40c"
 
 # Polybar 
@@ -353,7 +354,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set powersavings for display:
-exec --no-startup-id xset s 480 dpms 600 600 600
+exec --no-startup-id xset r rate 250 60
 
 # disable power saving (for example if using xscreensaver)
 #exec --no-startup-id xset -dpms

@@ -107,6 +107,6 @@ source $ZSH/oh-my-zsh.sh
 function journal () {
     glow -p /home/$USER/config/notes/$(printf '%s.md' $1)
 }
-export EDITOR=/usr/bin/vim/
-
+export EDITOR=/usr/bin/vim
 export PATH=$PATH:$HOME/.config/rofi/scripts/
+
