@@ -9,6 +9,7 @@ cp -vr $HOME/.zshenv ~/i3-rice/zshenv
 cp -vr $HOME/.config/picom/* ~/i3-rice/picom/
 cp -vr $HOME/.config/polybar/* ~/i3-rice/polybar/
 cp -vr $HOME/.config/i3/* ~/i3-rice/i3/
+cp -vr $HOME/.bashrc ~/i3-rice/
 
 wait
 
