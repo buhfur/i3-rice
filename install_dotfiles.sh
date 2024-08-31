@@ -18,6 +18,18 @@ if ! [[ -a $HOME/.oh-my-zsh/oh-my-zsh.sh ]]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
+#Install fonts 
+echo "Would you like to install the Iosevka font ? "
+
+read response 
+if [[ "$response" == [yY] ]]; then
+    curl -O --output-dir $HOME/Downloads https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Iosevka.tar.xz
+    sudo tar xvf $HOME/Downloads/Iosevka.tar.xz -C / usr/share/fonts/
+    echo "Iosevka font was installed"
+fi
+
+
+
 cat zshrc > ~/.zshrc 
 cat bashrc > ~/.bashrc 
 cat tmux.conf > ~/.tmux.conf
