@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#NOTE: YOU MUST BE ROOT TO RUN THIS SCRIPT 
 
 if [ $SHELL == /bin/zsh ]; then
 
@@ -22,7 +23,7 @@ fi
 echo "Would you like to install the Iosevka font ? "
 
 if ! [[ -a /usr/share/fonts ]]; then
-    echo "/usr/share/fonts does not exist"
+    mkdir /usr/share/fonts
 fi
 
 read response 
