@@ -21,6 +21,10 @@ fi
 #Install fonts 
 echo "Would you like to install the Iosevka font ? "
 
+if ! [[ -a /usr/share/fonts ]]; then
+    echo "/usr/share/fonts does not exist"
+fi
+
 read response 
 if [[ "$response" == [yY] ]]; then
     curl -O --output-dir $HOME/Downloads https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Iosevka.tar.xz
@@ -37,7 +41,7 @@ cat vimrc > ~/.vimrc
 cat xinitrc > ~/.xinitrc
 
 #copy ohmyzsh config
-cp -rv oh-my-zsh $HOME/.oh-my-zsh
+cp -r oh-my-zsh $HOME/.oh-my-zsh
 
 
 
