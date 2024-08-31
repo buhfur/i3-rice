@@ -5,12 +5,12 @@
 if [ $SHELL == /bin/zsh ]; then
 
     if ! [ -a $HOME/.zshenv ]; then
-        cp ../dotfiles/aliases $HOME/.zshenv
+        cp aliases $HOME/.zshenv
     fi
 
 else
     if ! [ -a $HOME/.aliases ]; then
-        cp ../dotfiles/aliases $HOME/.aliases
+        cp aliases $HOME/.aliases
     fi
 fi
 
