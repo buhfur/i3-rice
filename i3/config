@@ -2,13 +2,15 @@
 #######################
 # config starts here: #
 ######################
-# set wallpaper
+source /usr/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 exec --no-startup-id  nitrogen --restore
 exec --no-startup-id redshift -l 35:34 -t 4000:4000
 exec --no-startup-id mongod --dbpath ~/database 
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id xmodmap ~/.Xmodmap
+exec xinput --disable 13
 exec_always --no-startup-id xborders --border-rgba "#ffc40c"
+
 
 # Polybar 
 exec_always bash ~/.config/polybar/launch.sh --cuts
@@ -454,7 +456,8 @@ client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
 
 # Application menu handled by rofi: #
 #####################################
-bindsym $mod+d exec sh ~/.config/rofi/launchers/type-2/launcher.sh
+#bindsym $mod+d exec sh ~/.config/rofi/launchers/type-2/launcher.sh
+bindsym $mod+d exec rofi -show drun -theme ~/.local/share/rofi/themes/rounded-orange-dark.rasi
 #bindsym $mod+e exec rofi -modi emoji -show emoji -theme ~/.config/polybar/cuts/scripts/rofi/emoji.rasi
 bindsym $mod+Shift+e exec sh ~/.config/polybar/cuts/scripts/powermenu.sh
 

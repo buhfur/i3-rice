@@ -4,6 +4,11 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# Check if zsh-autocomplete is installed 
+if ! [[ -a /usr/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
+    sudo git clone https://github.com/marlonrichert/zsh-autocomplete /usr/share/zsh-autocomplete
+fi
+source /usr/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 # Set name of the theme to load --- if set to "random", it will
 ## load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -101,12 +106,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#alias journal="glow -p /home/$USER/config/notes/$1.md"
 
 
-function journal () {
-    glow -p /home/$USER/config/notes/$(printf '%s.md' $1)
-}
 export EDITOR=/usr/bin/vim
 export PATH=$PATH:$HOME/.config/rofi/scripts/
 
