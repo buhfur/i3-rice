@@ -29,10 +29,12 @@ fi
 read response 
 if [[ "$response" == [yY] ]]; then
     curl -O --output-dir $HOME/Downloads https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Iosevka.tar.xz
+    wait
     sudo tar xvf $HOME/Iosevka.tar.xz -C / usr/share/fonts/
+    wait
     echo "Iosevka font was installed"
 fi
-
+wait
 
 
 cat zshrc > ~/.zshrc 
