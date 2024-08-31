@@ -37,7 +37,6 @@ cat zshrc > ~/.zshrc
 cat bashrc > ~/.bashrc 
 cat tmux.conf > ~/.tmux.conf
 cat vimrc > ~/.vimrc
-cat xinitrc > ~/.xinitrc
 
 #copy ohmyzsh config
 cp -r oh-my-zsh $HOME/.oh-my-zsh
