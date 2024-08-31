@@ -28,7 +28,7 @@ fi
 
 read response 
 if [[ "$response" == [yY] ]]; then
-    curl -O --output-dir $HOME/ https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Iosevka.tar.xz && sudo tar xvf $HOME/Iosevka.tar.xz -C / usr/share/fonts/
+    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Iosevka.tar.xz -P $HOME/ && sudo tar xvf $HOME/Iosevka.tar.xz -C /usr/share/fonts/
     echo "Iosevka font was installed"
 fi
 
