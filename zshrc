@@ -110,3 +110,8 @@ function journal () {
 export EDITOR=/usr/bin/vim
 export PATH=$PATH:$HOME/.config/rofi/scripts/
 
+alias gp='git add . && git commit -a && git push'
+
+# TEMP , REMOVE AFTER RELOG
+alias rls='sudo systemctl daemon-reload'
+alias sys='sudo systemctl'
