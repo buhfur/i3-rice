@@ -2,7 +2,6 @@
 #######################
 # config starts here: #
 ######################
-source /usr/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 exec --no-startup-id  nitrogen --restore
 exec --no-startup-id redshift -l 35:34 -t 4000:4000
 exec --no-startup-id mongod --dbpath ~/database 
@@ -22,7 +21,7 @@ exec_always --no-startup-id feh --bg-fill /home/buhfur/Pictures/pic.png
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango: JetBrains Mono NL Regular 10
+font pango: Iosevka 10
 
 # set the mod key to the winkey:
 set $mod Mod4
