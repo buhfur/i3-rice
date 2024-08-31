@@ -1,6 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+#Check if oh-my-zsh is installed 
+if ! [[ -a $HOME/.oh-my-zsh/oh-my-zsh.sh ]]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -8,6 +12,8 @@ export ZSH=$HOME/.oh-my-zsh
 if ! [[ -a /usr/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
     sudo git clone https://github.com/marlonrichert/zsh-autocomplete /usr/share/zsh-autocomplete
 fi
+
+
 source /usr/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 # Set name of the theme to load --- if set to "random", it will
 ## load a random theme each time oh-my-zsh is loaded, in which case,
