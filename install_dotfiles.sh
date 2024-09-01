@@ -4,15 +4,16 @@
 
 FONT_INS_PATH=/tmp
 
-if [ $SHELL == /bin/zsh ]; then
-
+if [ $SHELL == /bin/zsh ] || [ $SHELL == /usr/bin/zsh ]; then
+    echo "$SHELL is set to zsh "
     if ! [ -a $HOME/.zshenv ]; then
-        cp aliases $HOME/.zshenv
+        cp aliases $HOME/.zshenv && echo "Zshenv copied over sucessfully"
     fi
 
-else
+elif [ $SHELL == /bin/bash ]; then 
+    echo "$SHELL is set to bash "
     if ! [ -a $HOME/.aliases ]; then
-        cp aliases $HOME/.aliases
+        cp aliases $HOME/.aliases && echo "Aliases copied over sucessfully"
     fi
 fi
 
@@ -38,7 +39,7 @@ fi
 cat zshrc > ~/.zshrc && echo "Zshrc copied over sucessfully"
 cat bashrc > ~/.bashrc && echo "Bashrc copied over sucessfully" 
 cat tmux.conf > ~/.tmux.conf && echo "Tmux.conf copied over sucessfully"
-cat vimrc > ~/.vimrc  && echo "Vimrc copied over sucessfully"
+cat vimrc > ~/.vimrc && echo "Vimrc copied over sucessfully"
 
 #copy ohmyzsh config
 cp -r oh-my-zsh $HOME/.oh-my-zsh && echo "Oh-my-zsh configs copied over sucessfully"
