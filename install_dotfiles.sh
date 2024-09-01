@@ -2,6 +2,8 @@
 
 #NOTE: YOU MUST BE ROOT TO RUN THIS SCRIPT 
 
+FONT_INS_PATH=/tmp
+
 if [ $SHELL == /bin/zsh ]; then
 
     if ! [ -a $HOME/.zshenv ]; then
@@ -28,19 +30,18 @@ fi
 
 read response 
 if [[ "$response" == [yY] ]]; then
-    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Iosevka.tar.xz -P /tmp/ && sudo tar xvf /tmp/Iosevka.tar.xz -C /usr/share/fonts/
+    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Iosevka.tar.xz -P /tmp/ && sudo tar xvf $FONT_INS_PATH/Iosevka.tar.xz -C /usr/share/fonts/ && echo "Installed Iosevka font successfully , saved to: $FONT_INS_PATH/Iosevka.tar.xz"
     echo "Iosevka font was installed"
 fi
 
 
-cat zshrc > ~/.zshrc 
-cat bashrc > ~/.bashrc 
-cat tmux.conf > ~/.tmux.conf
-cat vimrc > ~/.vimrc
+cat zshrc > ~/.zshrc && echo "Zshrc copied over sucessfully"
+cat bashrc > ~/.bashrc && echo "Bashrc copied over sucessfully" 
+cat tmux.conf > ~/.tmux.conf && echo "Tmux.conf copied over sucessfully"
+cat vimrc > ~/.vimrc  && echo "Vimrc copied over sucessfully"
 
 #copy ohmyzsh config
-cp -r oh-my-zsh $HOME/.oh-my-zsh
-
+cp -r oh-my-zsh $HOME/.oh-my-zsh && echo "Oh-my-zsh configs copied over sucessfully"
 
 
 
