@@ -15,7 +15,7 @@ set autoread
 
 " change color of tab line and tab area 
 :hi TabLineFill ctermfg=Black ctermbg=Black
-:hi TabLine ctermfg=Red ctermbg=Black
+:hi TabLine ctermfg=Yellow ctermbg=Black
 set breakindent
 set breakindentopt=shift:2
 "make completion more aware 
