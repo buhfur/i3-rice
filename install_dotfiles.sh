@@ -35,14 +35,14 @@ if [[ "$response" == [yY] ]]; then
     echo "Iosevka font was installed"
 fi
 
-
-cat zshrc > ~/.zshrc && echo "Zshrc copied over sucessfully"
-cat bashrc > ~/.bashrc && echo "Bashrc copied over sucessfully" 
-cat tmux.conf > ~/.tmux.conf && echo "Tmux.conf copied over sucessfully"
-cat vimrc > ~/.vimrc && echo "Vimrc copied over sucessfully"
+PARENT=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cat $PARENT/zshrc > ~/.zshrc && echo "Zshrc copied over sucessfully"
+cat $PARENT/bashrc > ~/.bashrc && echo "Bashrc copied over sucessfully" 
+cat $PARENT/tmux.conf > ~/.tmux.conf && echo "Tmux.conf copied over sucessfully"
+cat $PARENT/vimrc > ~/.vimrc && echo "Vimrc copied over sucessfully"
 
 #copy ohmyzsh config
-cp -r oh-my-zsh $HOME/.oh-my-zsh && echo "Oh-my-zsh configs copied over sucessfully"
+cp -r $PARENT/oh-my-zsh $HOME/.oh-my-zsh && echo "Oh-my-zsh configs copied over sucessfully"
 
 
 
