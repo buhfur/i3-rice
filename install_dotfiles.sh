@@ -22,7 +22,7 @@ if ! [[ -a $HOME/.oh-my-zsh/oh-my-zsh.sh ]]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-#Install fonts 
+# Install fonts 
 echo "Would you like to install the Iosevka font ? "
 
 if ! [[ -a /usr/share/fonts ]]; then
@@ -41,7 +41,7 @@ cat $PARENT/bashrc > ~/.bashrc && echo "Bashrc copied over sucessfully"
 cat $PARENT/tmux.conf > ~/.tmux.conf && echo "Tmux.conf copied over sucessfully"
 cat $PARENT/vimrc > ~/.vimrc && echo "Vimrc copied over sucessfully"
 
-#copy ohmyzsh config
+# Copy ohmyzsh config
 cp -r $PARENT/oh-my-zsh $HOME/.oh-my-zsh && echo "Oh-my-zsh configs copied over sucessfully"
 
 
