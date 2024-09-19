@@ -460,4 +460,4 @@ bindsym $mod+d exec rofi -show drun -theme ~/.local/share/rofi/themes/rounded-or
 #bindsym $mod+e exec rofi -modi emoji -show emoji -theme ~/.config/polybar/cuts/scripts/rofi/emoji.rasi
 bindsym $mod+Shift+e exec sh ~/.config/polybar/cuts/scripts/powermenu.sh
 
-
+exec --no-startup-id "setxkbmap -option ctrl:nocaps"
