@@ -17,3 +17,9 @@ alias sys='sudo systemctl'
 alias gp='git add . ; git commit -a ; git push'
 alias gdock='docker run -it -v /var/run/docker.sock:/var/run/docker.sock kakshipth/gomanagedocker:latest'
 alias jf='cd /mnt/media/jellyfin/'
+# SSH aliases
+alias proxmox='ssh root@proxmox'
+alias jellyfin='ssh jellyfin@jellyfin'
+alias tserver='ssh torrent-user@torrent-server'
+alias dnsserver='ssh dns-user@dns-server'
+
